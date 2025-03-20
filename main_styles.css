@@ -83,6 +83,26 @@
     font-size: 1.0em; /* Slightly larger font size for body text */
     color: #666; /* Lighter gray text for better readability */
   }
+
+  /* Styling for the square */
+#square {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db; /* Initial blue color */
+    margin: 0 auto;
+    transition: all 0.3s ease; /* Smooth transition for changes */
+  }
+  
+  /* Hover effect: Change color when mouse is over the square */
+  #square:hover {
+    background-color: #e74c3c; /* Red color on hover */
+  }
+  
+  /* Active state: When clicked, square size changes */
+  #square.active {
+    width: 300px; /* Increase size */
+    height: 300px; /* Increase size */
+  }
   
   /* Footer styles */
   footer {
