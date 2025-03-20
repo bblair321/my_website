@@ -1,0 +1,120 @@
+/* Resetting some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic body styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    line-height: 1.6; /* Makes the text more readable */
+    background-color: #F7F7F7; /* Light background color for a soft, airy feel */
+    color: #333; /* Dark text color for readability */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header styles */
+  header {
+    background: linear-gradient(135deg, #2D3748, #4A90E2); /* Subtle gradient for depth */
+    color: #F7F7F7; /* Light text for contrast */
+    padding: 20px 0; /* Padding on top and bottom */
+    text-align: center; /* Centers the text */
+  }
+  
+  header h1 {
+    font-size: 2.5em; /* Increases the size of the heading */
+    font-weight: 700; /* Boldens the heading */
+    letter-spacing: 1px; /* Adds space between letters for a more modern feel */
+    margin-bottom: 10px;
+  }
+  
+  /* Navigation styles */
+  nav ul {
+    list-style-type: none; /* Removes bullet points from the list */
+    display: flex; /* Aligns the list items horizontally */
+    justify-content: center; /* Centers the navigation items */
+    margin-top: 15px;
+  }
+  
+  nav ul li {
+    margin: 0 20px; /* Adds space between navigation items */
+  }
+  
+  nav ul li a {
+    text-decoration: none; /* Removes the underline from links */
+    color: #333; /* Dark text color for links */
+    font-weight: 500; /* Slightly lighter font weight */
+    padding: 10px 15px; /* Adds padding to the links */
+    border-radius: 5px; /* Rounds the corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  nav ul li a:hover {
+    background-color: #50E3C2; /* Adds a modern mint hover effect */
+    color: #F7F7F7; /* Changes text color to light on hover */
+    transform: translateY(-2px); /* Adds a lift effect on hover */
+  }
+  
+  /* Main content styles */
+  main {
+    padding: 40px; /* Adds padding inside the main content */
+    background-color: #FFFFFF; /* White background for the main content */
+    margin: 30px auto; /* Centers the content and adds margin */
+    max-width: 1000px; /* Limits the width to a maximum value */
+    border-radius: 10px; /* Rounded corners for a softer, modern look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds a subtle, elevated shadow around the main content */
+  }
+  
+  main h2 {
+    font-size: 2em; /* Increases the size of the section heading */
+    font-weight: 600; /* Medium weight for headings */
+    margin-bottom: 20px; /* Adds space below the heading */
+    color: #4A90E2; /* Blue color for headings to match the theme */
+  }
+  
+  section {
+    margin-bottom: 30px; /* Adds space between sections */
+  }
+  
+  section p {
+    line-height: 1.8; /* Makes paragraphs easier to read */
+    font-size: 1.1em; /* Slightly larger font size for body text */
+    color: #666; /* Lighter gray text for better readability */
+  }
+  
+  /* Footer styles */
+  footer {
+    text-align: center; /* Centers the text */
+    background-color: #2D3748; /* Dark background to contrast with body */
+    color: #F7F7F7; /* Light text color */
+    padding: 20px 0; /* Padding on top and bottom */
+    position: relative;
+    width: 100%; /* Ensures the footer spans the whole width */
+    bottom: 0; /* Positions the footer at the bottom */
+    font-size: 0.9em; /* Slightly smaller text for the footer */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column; /* Stacks the navigation links vertically on smaller screens */
+    }
+  
+    nav ul li {
+      margin-bottom: 15px; /* Adds space between navigation items on smaller screens */
+    }
+  
+    main {
+      padding: 20px; /* Reduces padding inside main content on smaller screens */
+    }
+  
+    header h1 {
+      font-size: 2em; /* Reduces header size for smaller screens */
+    }
+  
+    footer {
+      padding: 15px 0; /* Adjust footer padding for smaller screens */
+    }
+  }
