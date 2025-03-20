@@ -80,7 +80,7 @@
   
   section p {
     line-height: 1.8; /* Makes paragraphs easier to read */
-    font-size: 1.1em; /* Slightly larger font size for body text */
+    font-size: 1.0em; /* Slightly larger font size for body text */
     color: #666; /* Lighter gray text for better readability */
   }
   
