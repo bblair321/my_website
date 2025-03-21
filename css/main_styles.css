@@ -75,7 +75,9 @@ main h2 {
 }
 
 section {
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Paragraph styles to ensure word wrap */
@@ -90,7 +92,7 @@ section p {
 .square-container {
     display: flex;
     flex-wrap: wrap;  /* Allow squares to wrap to the next row if needed */
-    justify-content: flex-start;  /* Align squares to the start of the container */
+    justify-content: center;  /* Align squares to the start of the container */
     gap: 20px;  /* Space between squares */
     margin-top: 20px;
     padding: 10px;
@@ -103,7 +105,6 @@ section p {
     flex: 1 1 200px;  /* Flex item with a base size of 200px */
     max-width: 200px;  /* Prevent squares from becoming too large */
     height: 200px;  /* Fixed height for each square */
-    background-image: url('assets/Escape_from_Tarkov.jpg');
     background-color: #3498db; /* Fallback color for unsupported browsers */
     background-size: cover; /* Ensure the image fully covers the container */
     background-position: center;
