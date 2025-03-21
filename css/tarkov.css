@@ -92,7 +92,6 @@ section p {
 .no-bullet {
     list-style-type: none;  /* Removes bullet or number */
 }
-Ty
 
 .square-container {
     display: flex;
@@ -122,6 +121,20 @@ Ty
 /* Hover effect for the square */
 .square:hover {
     transform: scale(1.1);  /* Slight zoom on hover */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Optional: adds rounded corners */
 }
 
 /* Footer styles */
