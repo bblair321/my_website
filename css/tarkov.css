@@ -13,6 +13,17 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    position: relative; /* For wave canvas positioning */
+}
+
+/* Make sure canvas is behind content */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind other content */
 }
 
 /* Header styles */
