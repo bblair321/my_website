@@ -62,7 +62,7 @@ main {
     padding: 40px;
     background-color: #FFFFFF;
     margin: 30px auto;
-    max-width: 1000px;
+    max-width: 1200px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -87,32 +87,35 @@ section p {
     overflow-wrap: break-word; /* Ensure consistent behavior across browsers */
 }
 
-/* Styling for the square */
-#square {
-    width: 100%; /* Makes the square responsive */
-    max-width: 200px; /* Optional max-width */
-    height: 250px; /* Fixed height */
+.square-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allow squares to wrap to the next row if needed */
+    justify-content: flex-start;  /* Align squares to the start of the container */
+    gap: 20px;  /* Space between squares */
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%; /* Ensure the container takes full width available */
+    box-sizing: border-box; /* Include padding and border in the container's width */
+}
+
+/* Styling for individual squares */
+.square {
+    flex: 1 1 200px;  /* Flex item with a base size of 200px */
+    max-width: 200px;  /* Prevent squares from becoming too large */
+    height: 200px;  /* Fixed height for each square */
     background-image: url('assets/Escape_from_Tarkov.jpg');
     background-color: #3498db; /* Fallback color for unsupported browsers */
     background-size: cover; /* Ensure the image fully covers the container */
-    background-position: center; /* You can still adjust the image position if needed */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    margin-left: 20px; /* Left margin for spacing */
-    margin-bottom: 20px; /* Optional bottom margin */
-    border-radius: 10px; /* Rounded corners to avoid sharp edges */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
     transition: transform 0.3s ease; /* Transition for hover effect */
-    display: block; /* Ensure it's a block-level element for proper margin/padding */
+    cursor: pointer; /* Make the squares clickable */
 }
 
 /* Hover effect for the square */
-#square:hover {
-    transform: scale(1.1);
-}
-
-/* Active state for the square */
-#square.active {
-    width: 300px;
-    height: 300px;
+.square:hover {
+    transform: scale(1.1);  /* Slight zoom on hover */
 }
 
 /* Footer styles */
@@ -145,8 +148,13 @@ footer {
         font-size: 2em;
     }
 
-    #square {
-        height: 150px;
+    .square-container {
+        justify-content: center;  /* Center the squares on smaller screens */
+    }
+
+    .square {
+        width: 150px; /* Adjust the width for smaller screens */
+        height: 150px; /* Adjust the height for smaller screens */
     }
 
     footer {
