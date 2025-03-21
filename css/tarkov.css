@@ -1,0 +1,169 @@
+/* Resetting some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6;
+    background-color: #F7F7F7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #2D3748, #4A90E2);
+    color: #F7F7F7;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #50E3C2;
+    color: #F7F7F7;
+    transform: translateY(-2px);
+}
+
+/* Main content styles */
+main {
+    padding: 40px;
+    background-color: #FFFFFF;
+    margin: 30px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #4A90E2;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Paragraph styles to ensure word wrap */
+section p {
+    line-height: 1.8;
+    font-size: 1.0em;
+    color: #666;
+    word-wrap: break-word; /* Wrap long words or URLs */
+    overflow-wrap: break-word; /* Ensure consistent behavior across browsers */
+}
+
+.no-bullet {
+    list-style-type: none;  /* Removes bullet or number */
+}
+Ty
+
+.square-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allow squares to wrap to the next row if needed */
+    justify-content: center;  /* Align squares to the start of the container */
+    gap: 20px;  /* Space between squares */
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%; /* Ensure the container takes full width available */
+    box-sizing: border-box; /* Include padding and border in the container's width */
+}
+
+/* Styling for individual squares */
+.square {
+    flex: 1 1 200px;  /* Flex item with a base size of 200px */
+    max-width: 200px;  /* Prevent squares from becoming too large */
+    height: 200px;  /* Fixed height for each square */
+    background-color: #3498db; /* Fallback color for unsupported browsers */
+    background-size: cover; /* Ensure the image fully covers the container */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Transition for hover effect */
+    cursor: pointer; /* Make the squares clickable */
+}
+
+/* Hover effect for the square */
+.square:hover {
+    transform: scale(1.1);  /* Slight zoom on hover */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #2D3748;
+    color: #F7F7F7;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .square-container {
+        justify-content: center;  /* Center the squares on smaller screens */
+    }
+
+    .square {
+        width: 150px; /* Adjust the width for smaller screens */
+        height: 150px; /* Adjust the height for smaller screens */
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}
