@@ -41,7 +41,7 @@ let offset = 0; // Wave animation offset
 function drawWave() {
   ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
 
-  ctx.fillStyle = 'rgba(0, 172, 238, 0.5)'; // Color of the wave
+  ctx.fillStyle = 'rgba(65, 119, 183, 100)'; // Color of the wave
   ctx.beginPath();
 
   // Create the wave shape
