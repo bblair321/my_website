@@ -84,3 +84,59 @@ window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
+
+// Get the form and feedback message container
+const form = document.getElementById('contactForm');
+const feedbackMessage = document.getElementById('feedbackMessage');
+
+// Handle the form submit event
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission
+
+  const formData = new FormData(form);
+
+  // Create an object with the form data
+  const data = {
+    name: formData.get('name'),
+    email: formData.get('email'),
+    message: formData.get('message'),
+  };
+
+  // Send data to the server
+  fetch('http://192.168.0.24:3000/submit-form', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  .then(response => response.json())
+  .then(result => {
+    console.log(result);
+    
+    // Show success message after successful submission
+    feedbackMessage.style.display = 'block';
+    feedbackMessage.textContent = 'Form submitted successfully! 🎮'; // You can customize this message
+    
+    // Optionally, clear the form fields
+    form.reset();
+
+    // Hide the feedback message after 5 seconds
+    setTimeout(() => {
+      feedbackMessage.style.display = 'none';
+    }, 5000);
+  })
+  .catch(error => {
+    console.error('Error submitting form:', error);
+    
+    // Show error message
+    feedbackMessage.style.display = 'block';
+    feedbackMessage.style.backgroundColor = '#f44336'; // Red for error
+    feedbackMessage.textContent = 'Something went wrong. Please try again later.';
+    
+    // Hide the feedback message after 5 seconds
+    setTimeout(() => {
+      feedbackMessage.style.display = 'none';
+    }, 5000);
+  });
+});

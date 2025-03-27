@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>My Web Page</title>
   <link rel="stylesheet" type="text/css" href="../css/main_styles.css"> <!-- Link to external CSS file -->
-  <script src="../js/main.js" defer></script> <!-- Link to external JS file (optional) -->
+  <script src="../js/main.js" defer></script> <!-- Link to external JS file -->
 </head>
 <body>
   <canvas id="gameCanvas"></canvas> <!-- Corrected the canvas element -->
@@ -29,7 +29,7 @@
     <section>
       <h2>Request Form</h2>
       <p>You can fill out the form below to request a mod installer</p>
-      <form id="contactForm" action="/submit-form" method="POST">
+      <form id="contactForm" action="http://192.168.0.24:3000/submit-form" method="POST">
         <label for="game">Name of Game:</label>
         <input type="text" id="name" name="name" required><br><br>
         
@@ -40,7 +40,16 @@
         <textarea id="message" name="message" required></textarea><br><br>
     
         <button type="submit">Submit</button>
-    </form>
+      </form>
+
+      <!-- Feedback Message Container (Visible after form submission) -->
+      <div id="feedbackMessage" style="display:none; padding: 20px; background-color: #4CAF50; color: white; margin-top: 20px;">
+        Form submitted successfully! 🎮
+      </div>
+
+      <div id="errorMessage" style="display:none; padding: 20px; background-color: #f44336; color: white; margin-top: 20px;">
+        Something went wrong. Please try again later.
+      </div>
     </section>
   </main>
 
