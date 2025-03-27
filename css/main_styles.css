@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 /* Resetting some default browser styles */
 * {
     margin: 0;
@@ -7,14 +8,16 @@
 
 /* Basic body styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-family: "Orbitron", sans-serif;
     line-height: 1.6;
-    background-color: #F7F7F7;
+    background-color: #1a1a1a;
+    overflow: hidden; 
     color: #333;
     margin: 0;
     padding: 0;
     position: relative; /* For wave canvas positioning */
 }
+
 
 /* Make sure canvas is behind content */
 canvas {
