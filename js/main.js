@@ -27,7 +27,6 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// Array of gaming-themed icons (could be emoji or images)
 const icons = ["🎮", "🕹️", "💾", "🔥", "⚔️", "🔫"];
 const particles = [];
 
