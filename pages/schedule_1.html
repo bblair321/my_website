@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My Web Page</title>
-  <link rel="stylesheet" type="text/css" href="../css/main_styles.css"> <!-- Link to external CSS file -->
-  <script src="../js/main.js" defer></script> <!-- Link to external JS file -->
+  <title>Brady's Mod Installers</title>
+  <link rel="stylesheet" type="text/css" href="../css/tarkov.css"> <!-- Link to external CSS file -->
+  <script src="../js/main.js" defer></script> <!-- Link to external JS file (optional) -->
 </head>
 <body>
+  <!-- Canvas for wave background -->
   <canvas id="gameCanvas"></canvas> <!-- Corrected the canvas element -->
+
   <!-- Header Section -->
   <header>
     <h1>Brady's Mod Installers</h1>
@@ -26,18 +28,28 @@
   <!-- Main Content Section -->
   <main>
     <section>
-      <h2>Games that I currently have mod installers for</h2>
-      <div class="square-container">
-        <div class="square" id="square1" data-url="tarkov.html" data-bg="../assets/Escape_from_Tarkov.jpg" data-size="100% 100%"></div>
-        <div class="square" id="square2" data-url="valheim.html" data-bg="../assets/valheim.jpeg" data-size="center"></div>
-        <div class="square" id="square3" data-url="schedule_1.html" data-bg="../assets/schedule_1.jpeg" data-size="center"></div>
+      <h2>Schedule 1 mod installer setup</h2>
+      <div>
+        <p>
+          This is the setup page for using my Schedule 1 mod installer.
+        </p>
+        <ul>
+          <li>
+            The first step is to download the mod installer from <a href="https://github.com/bblair321/schedule_1_mod_installer/releases/latest/download/Schedule.1.mod.installer.msi" target="_blank">Here</a>
+            Then just follow the video below.
+          </li>
+          <li class="no-bullet">
+            <div class="video-container">
+            <video controls>
+              <source src="../assets/valheim_installer.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
-
-  <!-- Canvas for Wave Background -->
-  <canvas id="waveCanvas"></canvas> <!-- Canvas for the wave animation -->
-
   <!-- Footer Section -->
   <footer>
     <p>
