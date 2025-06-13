@@ -4,17 +4,17 @@ import Card from '../Card/Card';
 const cardsData = [
   {
     title: 'Escape From Tarkov',
-    description: 'Easy install for popular mods.',
+    description: 'Contains client side mods mainly intended to be used along side my hosted server.',
     imageUrl: '/my_website/Escape_from_Tarkov.jpg',
   },
   {
     title: 'Valheim',
-    description: 'Advanced installer with customization.',
+    description: 'Contains mods, that are all mainly client side.',
     imageUrl: '/my_website/valheim.jpeg',
   },
   {
     title: 'Schedule 1',
-    description: 'Lightweight and fast installer.',
+    description: 'A collection of mods that enhance gameplay.',
     imageUrl: '/my_website/schedule_1.jpeg',
   },
 ];
