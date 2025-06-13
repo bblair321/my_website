@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
 function Header() {
@@ -6,9 +7,9 @@ function Header() {
       <h1>Brady's Mod Installers</h1>
       <nav className={styles.nav}>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/services">Installers</a></li>
-          <li><a href="/contact">Mods</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/services">Installers</Link></li>
+          <li><Link to="/contact">Mods</Link></li>
         </ul>
       </nav>
     </header>
