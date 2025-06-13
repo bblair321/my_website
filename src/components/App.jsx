@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import '../styles/Global.css'
-import Footer from './Footer.jsx'
-import Header from './Header.jsx'
-import Body from './Body.jsx'
+import Footer from './Footer/Footer.jsx'
+import Header from './Header/Header.jsx'
+import Body from './Body/Body.jsx'
 
 function App() {
   return (
