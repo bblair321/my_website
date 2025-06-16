@@ -27,6 +27,7 @@ function Carousel({ title, items }) {
               title={item.title}
               description={item.description}
               imageUrl={item.imageUrl}
+              link={item.link}
             />
           ))}
         </div>

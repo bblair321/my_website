@@ -4,7 +4,9 @@ import Footer from './Footer/Footer.jsx';
 import Header from './Header/Header.jsx';
 import HomePage from '../pages/HomePage.jsx';
 import ServicesPage from '../pages/Installers.jsx';
-import ContactPage from '../pages/ContactPage.jsx';
+import TarkovPage from '../pages/TarkovPage.jsx';
+import ValheimPage from '../pages/ValheimPage.jsx';
+import SchedulePage from '../pages/SchedulePage.jsx';
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/installers" element={<ServicesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/installers/tarkov" element={<TarkovPage />} />
+          <Route path="/installers/valheim" element={<ValheimPage />} />
+          <Route path="/installers/schedule" element={<SchedulePage />} />
         </Routes>
       </main>
       <Footer />

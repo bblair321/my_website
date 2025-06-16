@@ -19,11 +19,6 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-snap-type: x mandatory;
-
-  /* The calculation: 
-    Take 50% of the container's width and subtract half of a card's width.
-    This ensures the space on the left allows the first card to be centered.
-  */
   padding: 1rem calc(50% - var(--card-width, 250px) / 2);
 }
 .carouselContent::-webkit-scrollbar {
@@ -60,4 +55,9 @@
 .carouselButtonRight {
   right: 0;
   border-radius: 4px 0 0 4px;
+}
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
