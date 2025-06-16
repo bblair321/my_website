@@ -7,19 +7,22 @@ export default function Installers() {
       id: 1,
       title: "Escape From Tarkov",
       description: "A collection of client side mods required for my server.",
-      imageUrl: "Escape_from_Tarkov.png"
+      imageUrl: "Escape_from_Tarkov.png",
+      link: "/installers/tarkov"
     },
     {
       id: 2,
       title: "Valheim",
       description: "A collection of client side mods.",
-      imageUrl: "valheim.jpeg"
+      imageUrl: "valheim.jpeg",
+      link: "/installers/valheim"
     },
     {
       id: 3,
       title: "Schedule 1",
       description: "A collection of client side mods.",
-      imageUrl: "schedule_1.jpeg"
+      imageUrl: "schedule_1.jpeg",
+      link: "/installers/schedule"
     }
   ];
 
@@ -33,6 +36,7 @@ export default function Installers() {
             title={installer.title}
             description={installer.description}
             imageUrl={installer.imageUrl}
+            link={installer.link}
           />
         ))}
       </div>

@@ -21,7 +21,14 @@ export default function SchedulePage() {
         <li className={styles.featureItem}>Automatic mod configuration</li>
         <li className={styles.featureItem}>Compatible with latest version</li>
       </ul>
-      <button className={styles.downloadButton}>Download Installer</button>
+      <a
+              href="https://github.com/bblair321/schedule_1_mod_installer/releases/latest"
+      
+              className={styles.downloadButton}
+              download
+       >
+              Download Installer
+      </a>
     </section>
   );
 }

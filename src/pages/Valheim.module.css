@@ -135,6 +135,7 @@
   box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .downloadButton::before {
