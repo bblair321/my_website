@@ -1,0 +1,63 @@
+.carouselContainer {
+  padding: 1rem 0;
+  position: relative;
+}
+.carouselTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e5e5e5;
+  padding-left: 4%;
+  margin-bottom: 0.5rem;
+}
+.carouselWrapper {
+  position: relative;
+}
+.carouselContent {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+
+  /* The calculation: 
+    Take 50% of the container's width and subtract half of a card's width.
+    This ensures the space on the left allows the first card to be centered.
+  */
+  padding: 1rem calc(50% - var(--card-width, 250px) / 2);
+}
+.carouselContent::-webkit-scrollbar {
+  display: none;
+}
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 100%;
+  z-index: 10;
+  font-size: 2rem;
+  transition: background-color 0.2s ease;
+  opacity: 0;
+}
+.carouselWrapper:hover .carouselButton {
+  opacity: 1;
+}
+
+.carouselButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carouselButtonLeft {
+  left: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.carouselButtonRight {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}

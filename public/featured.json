@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Escape From Tarkov",
+    "description": "Client-side mod installer for our server.",
+    "imageUrl": "Escape_from_Tarkov.png"
+  },
+  {
+    "title": "Valheim",
+    "description": "Easy mod manager with presets.",
+    "imageUrl": "valheim.jpeg"
+  },
+  {
+    "title": "Schedule 1",
+    "description": "Lightweight installer for casual players.",
+    "imageUrl": "schedule_1.jpeg"
+  }
+]

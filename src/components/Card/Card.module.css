@@ -1,26 +1,72 @@
 .card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  background-color: #fff;
-  max-width: 300px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+  /* Define width as a CSS variable */
+  --card-width: 250px; 
 
+  flex: 0 0 auto;
+  width: var(--card-width); /* Use the variable here */
+  aspect-ratio: 16 / 9;
+  /* ... other styles remain the same ... */
+  scroll-snap-align: center; /* This is still useful to combine with this method */
+}
+.card:hover {
+  transform: scale(1.1);
+  z-index: 20;
+}
 .cardImage {
   width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 12px;
+  height: 100%;
+  object-fit: cover;
 }
-
+.cardImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+}
+.noImageText {
+  color: #aaa;
+  font-weight: bold;
+}
+.cardInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+.card:hover .cardInfo {
+  opacity: 1;
+}
 .cardTitle {
-  font-size: 1.25rem;
-  margin: 0 0 8px;
-  color: #333;
-}
-
-.cardDescription {
   font-size: 1rem;
-  color: #666;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 0.25rem 0;
+}
+.cardDescription {
+  font-size: 0.8rem;
+  color: #e5e5e5;
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+}
+.carouselContent {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  padding: 1rem calc(50% - var(--card-width, 250px) / 2);
+}
+.carouselContent::-webkit-scrollbar {
+  display: none;
 }
