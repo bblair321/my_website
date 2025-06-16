@@ -1,8 +1,19 @@
+:root {
+  --primary-blue: #3b82f6;
+  --primary-blue-light: #60a5fa;
+  --primary-blue-dark: #6366f1;
+  --secondary-cyan: #06b6d4;
+  --success-green: #10b981;
+  --text-light: #f9fafb;
+  --bg-dark-start: #374151;
+  --bg-dark-end: #1f2937;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+  background: linear-gradient(135deg, var(--bg-dark-start) 0%, var(--bg-dark-end) 100%);
   border-radius: 16px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   position: relative;
@@ -17,7 +28,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #3b82f6, #6366f1, #8b5cf6, #06b6d4, #10b981);
+  background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-dark), #8b5cf6, var(--secondary-cyan), var(--success-green));
   animation: pulse 2s ease-in-out infinite alternate;
 }
 
@@ -29,11 +40,11 @@
 .title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #f9fafb;
+  color: var(--text-light);
   text-align: center;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(45deg, #3b82f6, #06b6d4);
+  background: linear-gradient(45deg, var(--primary-blue), var(--secondary-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -54,7 +65,7 @@
 
 .gameImage {
   border-radius: 12px;
-  border: 3px solid #3b82f6;
+  border: 3px solid var(--primary-blue);
   box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
   transition: all 0.3s ease;
   filter: brightness(0.9);
@@ -75,7 +86,7 @@
   background: rgba(75, 85, 99, 0.2);
   padding: 1.5rem;
   border-radius: 12px;
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid var(--primary-blue);
   backdrop-filter: blur(10px);
 }
 
@@ -90,9 +101,10 @@
 .featureItem {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
   padding: 1rem 1.5rem;
+  padding-left: 3rem;
   border-radius: 10px;
   border: 1px solid rgba(59, 130, 246, 0.3);
-  color: #f9fafb;
+  color: var(--text-light);
   font-size: 1rem;
   position: relative;
   transition: all 0.3s ease;
@@ -105,18 +117,14 @@
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #10b981;
+  color: var(--success-green);
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-.featureItem {
-  padding-left: 3rem;
-}
-
 .featureItem:hover {
   transform: translateX(10px);
-  border-color: #3b82f6;
+  border-color: var(--primary-blue);
   box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
 }
 
@@ -128,8 +136,8 @@
   padding: 1.2rem 2rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #f9fafb;
-  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #06b6d4 100%);
+  color: var(--text-light);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 50%, var(--secondary-cyan) 100%);
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -145,26 +153,32 @@
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
 }
 
 .downloadButton:hover::before {
-  left: 100%;
+  transform: translateX(100%);
 }
 
 .downloadButton:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(59, 130, 246, 0.6);
-  background: linear-gradient(135deg, #60a5fa 0%, #8b5cf6 50%, #22d3ee 100%);
+  background: linear-gradient(135deg, var(--primary-blue-light) 0%, #8b5cf6 50%, #22d3ee 100%);
 }
 
 .downloadButton:active {
   transform: translateY(-1px);
   box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+}
+
+.downloadButton:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-blue-light);
 }
 
 @media (max-width: 768px) {
@@ -195,7 +209,7 @@
 
 @media (prefers-color-scheme: dark) {
   .container {
-    background: linear-gradient(135deg, #374151 0%, #111827 100%);
+    background: linear-gradient(135deg, var(--bg-dark-start) 0%, #111827 100%);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   }
   
