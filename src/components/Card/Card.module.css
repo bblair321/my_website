@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  width: 100%;
+  width: min(300px, 80vw);
   aspect-ratio: 16 / 9;
   background-color: #222;
   border-radius: 12px;
@@ -15,16 +15,18 @@
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
 
-.cardImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
+.cardImage,
 .cardImagePlaceholder {
   width: 100%;
   height: 100%;
+  display: block;
+}
+
+.cardImage {
+  object-fit: cover;
+}
+
+.cardImagePlaceholder {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +58,7 @@
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
-  margin: 0 0 0.25rem 0;
+  margin-bottom: 0.25rem;
 }
 
 .cardDescription {
@@ -68,20 +70,26 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   line-clamp: 2;
+  box-orient: vertical;
+  display: box;
 }
+
 
 .carouselContent {
   display: grid;
   gap: 2rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .carouselContent::-webkit-scrollbar {
   display: none;
 }
+
 .cardLink {
   text-decoration: none;
-  display: block;
   color: inherit;
+  display: block;
   transition: transform 0.3s ease;
 }
 
@@ -92,6 +100,7 @@
 .cardLink:focus {
   outline: none;
 }
+
 .cardList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
