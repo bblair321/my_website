@@ -2,6 +2,7 @@
   padding: 1rem 0;
   position: relative;
 }
+
 .carouselTitle {
   font-size: 1.5rem;
   font-weight: bold;
@@ -9,21 +10,25 @@
   padding-left: 4%;
   margin-bottom: 0.5rem;
 }
+
 .carouselWrapper {
   position: relative;
 }
+
 .carouselContent {
   display: flex;
   gap: 10px;
-  overflow-x: auto; 
+  overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-snap-type: x mandatory;
-  padding: 1rem calc(50% - var(--card-width, 250px) / 2);
+  padding: 1rem calc(50% - (var(--card-width, 250px) / 2));
 }
+
 .carouselContent::-webkit-scrollbar {
   display: none;
 }
+
 .carouselButton {
   position: absolute;
   top: 50%;
@@ -39,6 +44,7 @@
   transition: background-color 0.2s ease;
   opacity: 0;
 }
+
 .carouselWrapper:hover .carouselButton {
   opacity: 1;
 }
@@ -56,8 +62,9 @@
   right: 0;
   border-radius: 4px 0 0 4px;
 }
+
 .cardLink {
-  text-decoration: none;
-  color: inherit;
   display: block;
+  color: inherit;
+  text-decoration: none;
 }
