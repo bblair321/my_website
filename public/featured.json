@@ -16,5 +16,11 @@
     "description": "Lightweight installer for casual players.",
     "imageUrl": "schedule_1.jpeg",
     "link": "/installers/schedule"
+  },
+  {
+    "title": "Police Radio UI for FiveM",
+    "description": "A Police Radion UI for FivePD servers",
+    "imageUrl": "fivepdradio.jpg",
+    "link": "/mods"
   }
 ]

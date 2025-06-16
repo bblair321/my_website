@@ -1,22 +1,27 @@
 .card {
-  /* Define width as a CSS variable */
-  --card-width: 250px; 
-
-  flex: 0 0 auto;
-  width: var(--card-width); /* Use the variable here */
+  position: relative;
+  width: 100%;
   aspect-ratio: 16 / 9;
-  /* ... other styles remain the same ... */
-  scroll-snap-align: center; /* This is still useful to combine with this method */
+  background-color: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
-  transform: scale(1.1);
-  z-index: 20;
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
+
 .cardImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
+
 .cardImagePlaceholder {
   width: 100%;
   height: 100%;
@@ -25,31 +30,37 @@
   justify-content: center;
   background-color: #444;
 }
+
 .noImageText {
   color: #aaa;
   font-weight: bold;
+  font-size: 0.9rem;
 }
+
 .cardInfo {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 1rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
 }
+
 .card:hover .cardInfo {
   opacity: 1;
 }
+
 .cardTitle {
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
   margin: 0 0 0.25rem 0;
 }
+
 .cardDescription {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #e5e5e5;
   margin: 0;
   overflow: hidden;
@@ -58,15 +69,33 @@
   -webkit-box-orient: vertical;
   line-clamp: 2;
 }
+
 .carouselContent {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto; 
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  scroll-snap-type: x mandatory;
-  padding: 1rem calc(50% - var(--card-width, 250px) / 2);
+  display: grid;
+  gap: 2rem;
 }
+
 .carouselContent::-webkit-scrollbar {
   display: none;
+}
+.cardLink {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.cardLink:hover {
+  transform: scale(1.03);
+}
+
+.cardLink:focus {
+  outline: none;
+}
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  list-style: none;
 }
