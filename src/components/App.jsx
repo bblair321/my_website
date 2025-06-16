@@ -7,6 +7,7 @@ import ServicesPage from '../pages/Installers.jsx';
 import TarkovPage from '../pages/TarkovPage.jsx';
 import ValheimPage from '../pages/ValheimPage.jsx';
 import SchedulePage from '../pages/SchedulePage.jsx';
+import ModsPage from '../pages/Mods.jsx';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/installers/tarkov" element={<TarkovPage />} />
           <Route path="/installers/valheim" element={<ValheimPage />} />
           <Route path="/installers/schedule" element={<SchedulePage />} />
+          <Route path="/mods" element={<ModsPage />} />
         </Routes>
       </main>
       <Footer />
