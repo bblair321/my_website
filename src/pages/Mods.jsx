@@ -20,6 +20,15 @@ export default function ModsPage() {
       category: "gameplay",
       version: "v1.0.0",
       downloadUrl: "https://github.com/bblair321/fivepd-police-radio/archive/refs/heads/master.zip"
+    },
+    {
+      id: 3,
+      title: "Cop Holster Animation for FiveM",
+      description: "This FiveM client script adds a toggleable holster animation that plays when a player exits a vehicle. Toggle the animation feature on/off with the H key",
+      image: "fivepdholster.jpg",
+      category: "gameplay",
+      version: "v1.0.0",
+      downloadUrl: "https://github.com/bblair321/fivem-holster/archive/refs/heads/master.zip"
     }
   ];
 
