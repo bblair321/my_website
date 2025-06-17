@@ -22,5 +22,11 @@
     "description": "A Police Radion UI for FivePD servers",
     "imageUrl": "fivepdradio.jpg",
     "link": "/mods"
+  },
+  {
+    "title": "Holster mod for FiveM",
+    "description": "This FiveM client script adds a toggleable holster animation that plays when a player exits a vehicle",
+    "imageUrl": "fivepdholster.jpg",
+    "link": "/mods"
   }
 ]
