@@ -29,6 +29,15 @@ export default function ModsPage() {
       category: "gameplay",
       version: "v1.0.0",
       downloadUrl: "https://github.com/bblair321/fivem-holster/archive/refs/heads/master.zip"
+    },
+    {
+      id: 4,
+      title: "Safezone for FiveM",
+      description: "This FiveM client script adds the ability to create safezones in the game world. Players can only enter these zones if they have the correct permissions.",
+      image: "fivem-safezones.png",
+      category: "gameplay",
+      version: "v1.0.0",
+      downloadUrl: "https://github.com/bblair321/fivem-safezones/archive/refs/heads/main.zip"
     }
   ];
 

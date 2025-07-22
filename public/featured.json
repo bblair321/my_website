@@ -28,5 +28,11 @@
     "description": "This FiveM client script adds a toggleable holster animation that plays when a player exits a vehicle",
     "imageUrl": "fivepdholster.jpg",
     "link": "/mods"
+  },
+  {
+    "title": "Safezones for FiveM",
+    "description": "This FiveM client script adds the ability to create safezones in the game world. Players can only enter these zones if they have the correct permissions.",
+    "imageUrl": "fivem-safezones.png",
+    "link": "/mods"
   }
 ]
